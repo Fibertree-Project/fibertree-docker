@@ -1,0 +1,3 @@
+[submodule "src/fiber-tree"]
+	path = src/fiber-tree
+	url = ssh://git@github.mit.edu/symphony/fiber-tree

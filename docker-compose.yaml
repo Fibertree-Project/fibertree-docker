@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  notebook:
+    image: jsemer/fibertree-notebook
+    environment:
+      - TZ=America/New_York
+    volumes:
+      - ./data/fibertree/work:/home/jovyan/work
+    ports:
+      - "8888:8888"
+    command:
+      "start.sh jupyter notebook --NotebookApp.token=''"
+    restart:
+      unless-stopped
+
