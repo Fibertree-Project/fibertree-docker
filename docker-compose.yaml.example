@@ -18,6 +18,6 @@ services:
       - ./data/fibertree/work:/home/jovyan/work
     ports:
       - "8888:8888"
+    command: "start.sh jupyter notebook --NotebookApp.token=''"
     restart:
       unless-stopped
-
