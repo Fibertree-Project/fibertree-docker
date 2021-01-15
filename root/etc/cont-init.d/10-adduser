@@ -1,0 +1,26 @@
+#!/usr/bin/with-contenv bash
+
+NB_UID=${NB_UID:-1000}
+NB_GID=${NB_GID:-100}
+
+#
+# Change gid/uid of user
+#
+groupmod -o -g "${NB_GID}" ${NB_USER}
+usermod -o -u "${NB_UID}" ${NB_USER}
+
+#
+# Make sure user is in "users" group so
+# the user has access to /opt/conda
+#
+usermod -a -G 100 ${NB_USER}
+
+
+echo "
+-------------------------------------
+User name: ${NB_USER}
+User uid:  $(id -u ${NB_USER})
+User gid:  $(id -g ${NB_USER})
+User home: ${HOME}
+-------------------------------------
+"

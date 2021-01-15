@@ -7,6 +7,20 @@
 
 .nfs*
 
+# Python ignores
+
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+
 # Application-specific ignores
 
-./data
+docker-compose.yaml
+data/*
+
+# Keep .gitkeep
+
+!/**/.gitkeep

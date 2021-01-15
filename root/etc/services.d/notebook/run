@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv bash
+
+UMASK_SET=${UMASK_SET:-022}
+umask "$UMASK_SET"
+
+cd ${HOME}
+
+echo "Starting Server."
+exec s6-setuidgid ${NB_USER} \
+     start.sh jupyter notebook --NotebookApp.token=''
+
+

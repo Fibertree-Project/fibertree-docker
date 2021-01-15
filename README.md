@@ -6,8 +6,9 @@ Fibertree Jupyter notebooks in a docker container
 Start the container
 -----------------
 
-- Put **docker-compose.yaml** in an otherwise empty directory
+- Copy **docker-compose.yaml.example** to **docker-compose.yaml** in an otherwise empty directory
 - Cd to the directory containing the **docker-compose.yaml** file
+- In **docker-compose.yaml**, change NB_UID to the uid of the user you want to own your notebooks 
 - Run the following command:
 ```
         % docker-compose up -d
