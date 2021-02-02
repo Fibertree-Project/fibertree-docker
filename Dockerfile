@@ -62,7 +62,7 @@ RUN echo "**** install required packages ****" && \
        /tmp/* \
        /var/lib/apt/lists/*
 
-COPY /src/fiber-tree/requirements.txt /tmp
+COPY /src/fibertree/requirements.txt /tmp
 
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
@@ -122,9 +122,8 @@ COPY /root /
 #
 USER $NB_USER
 
-COPY /src/fiber-tree/examples/ipython /home/jovyan/fibertree-notebooks
-COPY /src/fiber-tree/examples/data /home/jovyan/data
-COPY /src/fiber-tree /home/jovyan/src/fiber-tree
+COPY /src/fibertree-notebooks /home/${NB_USER}/fibertree-notebooks
+COPY /src/fibertree /home/${NB_USER}/src/fibertree
 
 USER root
 
@@ -132,7 +131,7 @@ RUN  fix-permissions "/home/${NB_USER}"
 
 USER $NB_USER
 
-RUN cd /home/${NB_USER}/src/fiber-tree \
+RUN cd /home/${NB_USER}/src/fibertree \
     && pip install -e .
 
 #

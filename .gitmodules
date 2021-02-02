@@ -1,3 +1,6 @@
-[submodule "src/fiber-tree"]
-	path = src/fiber-tree
-	url = ssh://git@github.mit.edu/symphony/fiber-tree
+[submodule "src/fibertree"]
+	path = src/fibertree
+	url = git@github.com:Fibertree-Project/fibertree.git
+[submodule "src/fibertree-notebooks"]
+	path = src/fibertree-notebooks
+	url = git@github.com:Fibertree-Project/fibertree-notebooks.git

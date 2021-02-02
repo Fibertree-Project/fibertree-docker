@@ -15,7 +15,8 @@ representing tensors can be found sections 8.2 and 8.3 of the book
 [Efficient Processing of Deep Neural
 Networks](https://tinyurl.com/EfficientDNNBook).
 
-A table of content for the various notebooks can be found [here](./fibertree-notebooks/start-here.ipynb) or you can just start with the [basic tutorial](./fibertree-notebooks/basic/fibertree.ipynb) notebook.
+A table of content for the various notebooks can be found [here](./fibertree-notebooks/notebooks/start-here.ipynb)
+or you can just start with the [basic tutorial](./fibertree-notebooks/notebooks/basic/fibertree.ipynb) notebook.
 
 The container-based directories here are:
 
