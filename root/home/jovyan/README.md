@@ -20,11 +20,9 @@ or you can just start with the [basic tutorial](./fibertree-notebooks/notebooks/
 
 The container-based directories here are:
 
-- **data** - Some files containing tensors in a format that can be read by the fibertree code
+- **fibertree-notebooks** - A clone of the fibertree-notebooks fibertree git repository
 
-- **fibertree-notebooks** - A copy of notebooks from the fibertree git repository
-
-- **src/fiber-tree** - A clone of the entire fibertree git repository
+- **src/fibertree** - A clone of the fibertree git repository
 
 
 Other directories here have probably been mounted as volumes in the container.
