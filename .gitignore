@@ -18,8 +18,18 @@ env
 
 # Application-specific ignores
 
+#
+# User's docker-compose file
+#
 docker-compose.yaml
+docker-compose.yml
+
+#
+# Places user might place volumes
+#
 data/*
+volumes/*
+work/*
 
 # Keep .gitkeep
 
