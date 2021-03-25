@@ -16,7 +16,7 @@ version: '2'
 #
 services:
   notebook:
-    image: jsemer/fibertree-notebook
+    image: jsemer/fibertree-notebook:latest
     user: root
     environment:
       - NB_UID=1000

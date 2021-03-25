@@ -135,6 +135,12 @@ RUN cd /home/${NB_USER}/src/fibertree \
     && pip install -e .
 
 #
+# Create documentation
+#
+RUN pip install pdoc3 && \
+    pdoc3 --html --output /home/${NB_USER}/doc fibertree.core && \
+    pdoc3 --html --output /home/${NB_USER}/doc fibertree.graphics
+#
 # Launch application
 #
 USER root

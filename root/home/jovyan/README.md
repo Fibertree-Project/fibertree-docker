@@ -20,10 +20,13 @@ or you can just start with the [basic tutorial](./fibertree-notebooks/notebooks/
 
 The container-based directories here are:
 
-- **fibertree-notebooks** - A clone of the fibertree-notebooks fibertree git repository
+- [Fibertree notebooks](./fibertree-notebooks/notebooks) - A copy of the fibertree-notebooks fibertree git repository
 
-- **src/fibertree** - A clone of the fibertree git repository
+- [Fibertree source](./src/fibertree) - A copy of the fibertree git repository
 
+- [Fibertree documentation - core](./doc/fibertree/core/index.html) - Fibertree core library documentation
+
+- [Fibertree documentation - graphics](./doc/fibertree/graphics/index.html) - Fibertree graphics library documentation
 
 Other directories here have probably been mounted as volumes in the container.
 
