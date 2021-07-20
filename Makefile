@@ -25,19 +25,20 @@ all:	build
 # Build and tag docker image
 
 build:
+	./update_repos.sh
 	docker build ${BUILD_FLAGS} \
           --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
           --build-arg VCS_REF=${TAG} \
           --build-arg BUILD_VERSION=${VERSION} \
           -t ${IMG} .
 	docker tag ${IMG} ${ALTIMG}
- 
+
 
 # Push docker image
 
 push:
 	docker push ${NAME}
- 
+
 
 # Lint the Dockerfile
 
