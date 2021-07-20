@@ -25,7 +25,7 @@ all:	build
 # Build and tag docker image
 
 build:
-	./update_repos.sh
+	./scripts/update_compiler_repo.sh
 	docker build ${BUILD_FLAGS} \
           --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
           --build-arg VCS_REF=${TAG} \

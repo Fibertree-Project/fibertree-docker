@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Get the latest version of the fibertree repositories
-cd src/fibertree
-git pull origin master
-cd ../fibertree-notebooks
-git pull origin master
-cd ../..
-
 # Check if the user has access to the compiler repository
 git ls-remote git@github.com:FPSG-UIUC/hfa-compiler.git > /dev/null 2>&1
 if [ $? -eq 0 ]
