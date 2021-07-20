@@ -134,6 +134,22 @@ USER $NB_USER
 RUN cd /home/${NB_USER}/src/fibertree \
     && pip install -e .
 
+# Install the compiler if possible
+
+COPY /src/hfa-compiler /home/${NB_USER}/src/hfa-compiler
+
+USER root
+
+RUN fix-permissions "/home/${NB_USER}"
+
+USER $NB_USER
+
+RUN [ -e "/home/${NB_USER}/src/hfa-compiler/setup.py" ] \
+    && cd /home/${NB_USER}/src/hfa-compiler \
+    && pip install -e . \
+    || echo "No compiler to install"
+
+
 #
 # Create documentation
 #
