@@ -31,6 +31,9 @@ data/*
 volumes/*
 work/*
 
+# Ignore the HFA compiler repository
+src/hfa-compiler*
+
 # Keep .gitkeep
 
 !/**/.gitkeep
