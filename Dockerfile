@@ -29,7 +29,7 @@ RUN echo "**** install apt-utils and locales ****" && \
     apt-get install -y --no-install-recommends \
                libgl1 \
                fonts-freefont-ttf \
-               ttf-dejavu-core && \
+               fonts-dejavu && \
     echo "**** cleanup ****" && \
     apt-get clean && \
     rm -rf \
@@ -55,7 +55,7 @@ RUN echo "**** install required packages ****" && \
     apt-get install -y --no-install-recommends \
                libgl1 \
                fonts-freefont-ttf \
-               ttf-dejavu-core && \
+               fonts-dejavu && \
     echo "**** cleanup ****" && \
     apt-get clean && \
     rm -rf \
