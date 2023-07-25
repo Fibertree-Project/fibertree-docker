@@ -4,3 +4,6 @@
 [submodule "src/fibertree-notebooks"]
 	path = src/fibertree-notebooks
 	url = git@github.com:Fibertree-Project/fibertree-notebooks.git
+[submodule "src/fibertree-bootstrap"]
+	path = src/fibertree-bootstrap
+        url = git@github.com:Fibertree-Project/fibertree-bootstrap.git

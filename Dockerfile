@@ -123,6 +123,7 @@ COPY /root /
 USER $NB_USER
 
 COPY /src/fibertree-notebooks /home/${NB_USER}/fibertree-notebooks
+COPY /src/fibertree-bootstrap /home/${NB_USER}/src/fibertree-bootstrap
 COPY /src/fibertree /home/${NB_USER}/src/fibertree
 
 USER root
@@ -130,6 +131,9 @@ USER root
 RUN  fix-permissions "/home/${NB_USER}"
 
 USER $NB_USER
+
+RUN cd /home/${NB_USER}/src/fibertree-bootstrap \
+    && pip install -e .
 
 RUN cd /home/${NB_USER}/src/fibertree \
     && pip install -e .
@@ -155,7 +159,10 @@ RUN [ -e "/home/${NB_USER}/src/hfa-compiler/setup.py" ] \
 #
 RUN pip install pdoc3 && \
     pdoc3 --html --output /home/${NB_USER}/doc fibertree.core && \
-    pdoc3 --html --output /home/${NB_USER}/doc fibertree.graphics
+    pdoc3 --html --output /home/${NB_USER}/doc fibertree.graphics && \
+    pdoc3 --html --output /home/${NB_USER}/doc fibertree.notebook && \
+    pdoc3 --html --output /home/${NB_USER}/doc fibertree_bootstrap
+
 #
 # Launch application
 #
