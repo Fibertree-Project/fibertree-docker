@@ -107,9 +107,10 @@ RUN pip install --no-cache  jupyter_nbextensions_configurator && \
 
 USER $NB_USER
 
-RUN jupyter nbextensions_configurator enable --user && \
-    jupyter nbextension install --py --user notebook_index && \
-    jupyter nbextension enable --py --user notebook_index
+#RUN jupyter nbextensions_configurator enable --user && \
+#    jupyter nbextension install --py --user notebook_index && \
+#    jupyter nbextension enable --py --user notebook_index
+
 #
 # Get base and tools built in other containers
 #
