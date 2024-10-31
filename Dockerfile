@@ -1,7 +1,7 @@
 #
 # Base image for release (mainly adding s6)
 #
-FROM jupyter/minimal-notebook:latest AS release-base
+FROM quay.io/jupyter/minimal-notebook:latest AS release-base
 
 #
 # Set version for s6 overlay
